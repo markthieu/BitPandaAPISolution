@@ -1,0 +1,21 @@
+<h1>Commodities</h1>
+<table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Symbol</th>
+        <th>Name</th>
+        <th>Average Price</th>
+        <th>Follow</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let commodity of commodities ">
+          <td><img src="{{commodity.attributes.logo}}" alt="" /></td>
+           <td>{{commodity.attributes.symbol}}</td>
+           <td>{{commodity.attributes.name}}</td>
+           <td>{{commodity.attributes.avg_price}}€</td>
+           <td><button (click)="addToFeed(commodity)">Follow</button></td>
+        </tr>
+    </tbody>
+  </table>

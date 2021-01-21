@@ -1,0 +1,19 @@
+<h1>Fiats</h1>
+<table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Symbol</th>
+        <th>Name</th>
+        <th>To Euro Rate</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let fiat of fiats ">
+          <td><img src="{{fiat.attributes.logo}}" alt="" /></td>
+           <td>{{fiat.attributes.symbol}}</td>
+           <td>{{fiat.attributes.name}}</td>
+           <td>{{fiat.attributes.to_eur_rate}}</td>
+        </tr>
+    </tbody>
+  </table>

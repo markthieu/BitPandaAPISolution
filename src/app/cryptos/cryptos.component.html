@@ -1,0 +1,23 @@
+<h1>Cryptocurrencies</h1>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Symbol</th>
+        <th>Name</th>
+        <th>Average Price</th>
+        <th>24H Change %</th>
+        <th>Follow</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let crypto of cryptocurrencies ">
+          <td><img src="{{crypto.attributes.logo}}" alt="" /></td>
+           <td>{{crypto.attributes.symbol}}</td>
+           <td>{{crypto.attributes.name}}</td>
+           <td>{{crypto.attributes.avg_price}} €</td>
+           <td>{{crypto.attributes.change_24h}} %</td>
+           <td><button (click)="addToFeed(crypto)">Follow</button></td>
+        </tr>
+    </tbody>
+  </table>

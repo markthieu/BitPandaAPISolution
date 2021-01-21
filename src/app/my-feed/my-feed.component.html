@@ -1,0 +1,22 @@
+<h1>My feed</h1>
+
+<table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Symbol</th>
+        <th>Name</th>
+        <th>Average Price</th>
+        <th>24H Change %</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of items ">
+          <td><img src="{{item.attributes.logo}}" alt="" /></td>
+           <td>{{item.attributes.symbol}}</td>
+           <td>{{item.attributes.name}}</td>
+           <td>{{item.attributes.avg_price}} €</td>
+           <td>{{item.attributes.change_24h}} %</td>
+        </tr>
+    </tbody>
+  </table>
